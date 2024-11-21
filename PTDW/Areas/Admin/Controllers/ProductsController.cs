@@ -66,7 +66,8 @@ namespace PTDW.Areas.Admin.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CategoryProductId"] = new SelectList(_context.TblProductCategories, "CategoryProductId", "CategoryProductId", tblProduct.CategoryProductId);
+            ViewData["CategoryProductId"] = new 
+                SelectList(_context.TblProductCategories, "CategoryProductId", "CategoryProductId", tblProduct.CategoryProductId);
             return View(tblProduct);
         }
 
@@ -83,7 +84,8 @@ namespace PTDW.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-            ViewData["CategoryProductId"] = new SelectList(_context.TblProductCategories, "CategoryProductId", "Title", tblProduct.CategoryProductId);
+            ViewData["CategoryProductId"] = new 
+                SelectList(_context.TblProductCategories, "CategoryProductId", "Title", tblProduct.CategoryProductId);
             return View(tblProduct);
         }
 
