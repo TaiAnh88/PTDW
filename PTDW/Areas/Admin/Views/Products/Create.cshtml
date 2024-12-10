@@ -1,4 +1,4 @@
-﻿<!--Da lam th11-->
+﻿
 @model PTDW.Models.TblProduct
 
 @{
@@ -94,12 +94,12 @@
                                 </div>
                                 <div class="form-group">
                                     <label asp-for="IsNew" class="control-label">SP mới</label>
-                                    <input asp-for="IsNew" class="form-control" />
+                                    <input checked="checked" asp-for="IsNew" type="text" class="form-control" />
                                     <span asp-validation-for="IsNew" class="text-danger"></span>
                                 </div>
                                 <div class="form-group">
                                     <label asp-for="IsBestSeller" class="control-label">Bán chạy</label>
-                                    <input asp-for="IsBestSeller" class="form-control" />
+                                    <input checked="checked" asp-for="IsBestSeller" type="text" class="form-control" />
                                     <span asp-validation-for="IsBestSeller" class="text-danger"></span>
                                 </div>
                                 <div class="form-group">
@@ -109,7 +109,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label asp-for="IsActive" class="control-label">Hiện</label>
-                                    <input asp-for="IsActive" class="form-control" />
+                                    <input checked="checked" asp-for="IsActive" type="text" class="form-control" />
                                     <span asp-validation-for="IsActive" class="text-danger"></span>
                                 </div>
                                 <div class="form-group form-check">

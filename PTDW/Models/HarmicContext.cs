@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using PTDW.Areas.Admin.Models;
 
 namespace PTDW.Models;
 
@@ -45,6 +46,7 @@ public partial class HarmicContext : DbContext
 
     public virtual DbSet<TblRole> TblRoles { get; set; }
 
+   
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
