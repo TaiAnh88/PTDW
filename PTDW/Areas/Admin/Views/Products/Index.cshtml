@@ -61,33 +61,33 @@
                                         <th>Bán chạy</th>
                                         <th>Sao</th>
                                         <th>Hiện</th>
-                                    </tr>
                                 </thead>
                                 <tbody>
                                     @{
                                         int i = 1;
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td>@(i++)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.Title)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.CategoryProduct.Title)</td>
+                                                <td><img src="@Html.DisplayFor(modelItem => item.Image)" width="50" height="50" /></td>
+                                                <td>@Html.DisplayFor(modelItem => item.Price)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.PriceSale)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.Quantity)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.IsNew)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.IsBestSeller)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.Star)</td>
+                                                <td>@Html.DisplayFor(modelItem => item.IsActive)</td>
+                                                <td>
+                                                    <a asp-action="Edit" asp-route-id="@item.ProductId" class=" btn btn-primary">Sửa</a>
+                                                    <a asp-action="Details" asp-route-id="@item.ProductId" class=" btn btn-info">Chi tiết</a>
+                                                    <a asp-action="Delete" asp-route-id="@item.ProductId" class=" btn btn-danger">Xoá</a>
+                                                </td>
+                                            </tr>
+                                        }
                                     }
-                                    @foreach (var item in Model)
-                                    {
-                                        <tr>
-                                            <td>@(i++)</td>
-                                            <td>@Html.DisplayFor(modelItem => item.Title)</td>
-                                            <td>@Html.DisplayFor(modelItem => item.CategoryProduct.Title)</td>
-                                            <td><img src="@Html.DisplayFor(modelItem => item.Image)" width="50" hight="50" /></td>
-                                            <td>@Html.DisplayFor(modelItem => item.Price)</td>
-                                            <td>@Html.DisplayFor(modelItem => item.PriceSale)</td>
-                                            <td>@Html.DisplayFor(modelItem => item.Quantity)</td>
-                                            <td>@Html.DisplayFor(modelItem => item.IsNew)</td>
-                                            <td>@Html.DisplayFor(modelItem => item.IsBestSeller)</td>
-                                            <td>@Html.DisplayFor(modelItem => item.Star)</td>
-                                            <td>@Html.DisplayFor(modelItem => item.IsActive)</td>
-                                            <td>
-                                                <a asp-action="Edit" asp-route-id="@item.ProductId" class="btn btn-primary">Sửa</a>
-                                                <a asp-action="Details" asp-route-id="@item.ProductId" class="btn btn-info">Chi tiết</a>
-                                                <a asp-action="Delete" asp-route-id="@item.ProductId" class="btn btn-danger">Xóa</a>
-                                            </td>
-                                        </tr>
-                                    }
+
                                 </tbody>
                             </table>
                         </div>
@@ -96,9 +96,7 @@
                     <!-- /.card -->
                 </div>
             </div>
-
         </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
 </div>
-
