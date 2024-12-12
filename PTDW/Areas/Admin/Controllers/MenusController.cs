@@ -12,9 +12,9 @@ namespace PTDW.Areas.Admin.Controllers
     [Area("Admin")]
     public class MenusController : Controller
     {
-        private readonly HarmicContext _context;
+        private readonly DatabaseContext _context;
 
-        public MenusController(HarmicContext context)
+        public MenusController(DatabaseContext context)
         {
             _context = context;
         }

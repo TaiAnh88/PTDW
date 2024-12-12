@@ -6,8 +6,8 @@ namespace PTDW.ViewComponents
 {
     public class ProductViewComponent: ViewComponent
     {
-        private readonly HarmicContext _Context;
-        public ProductViewComponent(HarmicContext context)
+        private readonly DatabaseContext _Context;
+        public ProductViewComponent(DatabaseContext context)
         {
             _Context = context;
         }

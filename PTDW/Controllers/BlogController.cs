@@ -6,8 +6,8 @@ namespace PTDW.Controllers
 {
     public class BlogController : Controller
     {
-        private readonly HarmicContext _context;
-        public BlogController(HarmicContext context)
+        private readonly DatabaseContext _context;
+        public BlogController(DatabaseContext context)
         {
             _context = context;
         }

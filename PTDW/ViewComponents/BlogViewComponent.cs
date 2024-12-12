@@ -6,8 +6,8 @@ namespace PTDW.ViewComponents
 {
     public class BlogViewComponent : ViewComponent
     {
-        private readonly HarmicContext _Context;
-        public BlogViewComponent(HarmicContext context)
+        private readonly DatabaseContext _Context;
+        public BlogViewComponent(DatabaseContext context)
         {
             _Context = context;
         }

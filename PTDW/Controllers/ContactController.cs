@@ -5,8 +5,8 @@ namespace PTDW.Controllers
 {
     public class ContactController: Controller
     {
-        private readonly HarmicContext _context;
-        public ContactController(HarmicContext Context)
+        private readonly DatabaseContext _context;
+        public ContactController(DatabaseContext Context)
         {
             _context = Context;
         }

@@ -12,9 +12,9 @@ namespace PTDW.Areas.Admin.Controllers
     [Area("Admin")]
     public class ProductsController : Controller
     {
-        private readonly HarmicContext _context;
+        private readonly DatabaseContext _context;
 
-        public ProductsController(HarmicContext context)
+        public ProductsController(DatabaseContext context)
         {
             _context = context;
         }

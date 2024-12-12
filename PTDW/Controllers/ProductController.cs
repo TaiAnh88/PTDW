@@ -6,9 +6,9 @@ namespace PTDW.Controllers
 {
     public class ProductController : Controller
     {
-        private readonly HarmicContext _context;
+        private readonly DatabaseContext _context;
 
-        public ProductController(HarmicContext context) 
+        public ProductController(DatabaseContext context) 
         { 
         _context = context;
         }

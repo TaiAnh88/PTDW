@@ -7,10 +7,10 @@ namespace PTDW.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly HarmicContext _context;
+        private readonly DatabaseContext _context;
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(HarmicContext context, ILogger<HomeController> logger)
+        public HomeController(DatabaseContext context, ILogger<HomeController> logger)
         {
             _context = context;
             _logger = logger;

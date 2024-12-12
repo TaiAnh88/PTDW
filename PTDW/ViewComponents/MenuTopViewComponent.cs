@@ -5,9 +5,9 @@ namespace PTDW.ViewComponents
 {
     public class MenuTopViewComponent : ViewComponent
     {
-        private readonly HarmicContext _context;
+        private readonly DatabaseContext _context;
 
-        public MenuTopViewComponent(HarmicContext context)
+        public MenuTopViewComponent(DatabaseContext context)
         {
             _context = context;
         }
